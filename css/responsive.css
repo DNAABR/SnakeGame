@@ -1,0 +1,9 @@
+/* responsive.css */
+
+@media (max-width: 768px) {
+    #gameCanvas {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
