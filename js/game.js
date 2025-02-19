@@ -101,11 +101,20 @@ function resetGame() {
   snake.nextDirection = { x: 1, y: 0 };
   placeFood();
 }
+let gameInterval; // Store the interval ID
 
-// Public function to initialize and start the game loop.
-// This can be called from main.js after all components are ready.
+function gameLoop() {
+  update();
+  draw();
+}
+
+function startGameLoop(speed) {
+  clearInterval(gameInterval); // Clear any existing interval
+  gameInterval = setInterval(gameLoop, 1000 / speed); // Set the new interval
+}
+
 function initGame() {
-  requestAnimationFrame(gameLoop);
+  startGameLoop(baseSpeed); // Start with the initial speed
 }
 
 // Expose the initGame function if needed by other modules

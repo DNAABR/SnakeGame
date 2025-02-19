@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/themes.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    
 </head>
-<body class="display-page">
-    <div id="game-container" class="game-container">
-        <canvas id="game-canvas" width="800" height="600">
-            Your browser does not support the HTML canvas tag.
-        </canvas>
-        <div id="ui-controls" class="hud-container">
-            <!-- UI elements like score display, buttons, etc. will go here -->
-            <div id="score" class="score-time">Score: 0</div>
-            <button id="start-button" class="menu-button">Start Game</button>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="info-panel">
+            <p id="score">Score: 0</p>
+            <p id="level">Level: 1</p>
+            <button id="start-btn">Start</button>
+            <button id="pause-btn">Pause</button>
+            <button id="restart-btn">Restart</button>
+            <button id="sound-btn">Sound: ON</button>
         </div>
     </div>
-    <script src="js/main.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/engine.js"></script>
-    <script src="js/controls.js"></script>
-    <script src="js/mechanics.js"></script>
-    <script src="js/modes.js"></script>
-    <script src="js/powerups.js"></script>
-    <script src="js/levels.js"></script>
-    <script src="js/audio.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/tutorial.js"></script>
+
+    <!-- Tutorial Overlay -->
+    <div id="tutorial-overlay">
+        <div id="tutorial-box">
+            <p id="tutorial-text"></p>
+            <button id="tutorial-next-btn">Next</button>
+            <button id="tutorial-skip-btn">Skip</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

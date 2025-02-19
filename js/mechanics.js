@@ -25,15 +25,16 @@ function updateScore() {
 
 // Base speed (frames per second) and current speed variables.
 // currentSpeed can be used by your engine.js (or game loop) to control the update rate.
-let baseSpeed = 5;
+let baseSpeed = 20;
 let currentSpeed = baseSpeed;
-const maxSpeed = 10;
+const maxSpeed = 30;
 
-// Increase game speed every 5 points, up to a maximum speed.
+// Adjust the game difficulty based on the current score.
 function adjustDifficulty() {
   const newSpeed = baseSpeed + Math.floor(score / 5);
   currentSpeed = Math.min(newSpeed, maxSpeed);
   console.log(`Difficulty adjusted: ${currentSpeed} FPS`);
+  startGameLoop(currentSpeed); // Update the game loop speed
 }
 
 // --- Advanced Collision Detection ---
